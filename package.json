@@ -1,5 +1,5 @@
 {
-  "name": "inq-questions",
+  "name": "inquirer-from-object",
   "version": "1.0.0",
   "description": "Simple utility to interact with the Gemini API to ask questions and get responses in CLI",
   "main": "index.js",
