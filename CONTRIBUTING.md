@@ -8,22 +8,22 @@ There are many ways to contribute, from reporting bugs to suggesting new feature
 
 ### Reporting Bugs
 
-*   Ensure the bug hasn't already been reported by searching on the [issues page](https://github.com/ioncakephper/inquirer-from-object/issues).
-*   If you can't find an existing issue, [open a new one](https://github.com/ioncakephper/inquirer-from-object/issues/new) and provide as much detail as possible. Include steps to reproduce, expected behavior, and actual behavior.
+- Ensure the bug hasn't already been reported by searching on the [issues page](https://github.com/ioncakephper/inquirer-from-object/issues).
+- If you can't find an existing issue, [open a new one](https://github.com/ioncakephper/inquirer-from-object/issues/new) and provide as much detail as possible. Include steps to reproduce, expected behavior, and actual behavior.
 
 ### Suggesting Enhancements
 
-*   We'd love to hear your ideas for improving `inquirer-from-object`. Feel free to [open an issue](https://github.com/ioncakephper/inquirer-from-object/issues/new) to suggest new features or enhancements.
-*   Clearly describe the feature and its potential benefits.
+- We'd love to hear your ideas for improving `inquirer-from-object`. Feel free to [open an issue](https://github.com/ioncakephper/inquirer-from-object/issues/new) to suggest new features or enhancements.
+- Clearly describe the feature and its potential benefits.
 
 ### Code Contributions
 
-*   Fork the repository.
-*   Create a new branch for your feature or bug fix.
-*   Make your changes, ensuring your code adheres to the project's coding style.
-*   Write or update tests to cover your changes.
-*   Ensure all tests pass.
-*   Submit a pull request with a clear description of your changes.
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes, ensuring your code adheres to the project's coding style.
+- Write or update tests to cover your changes.
+- Ensure all tests pass.
+- Submit a pull request with a clear description of your changes.
 
 ## Development Setup
 
@@ -31,8 +31,8 @@ Instructions on how to set up your development environment.
 
 ### Prerequisites
 
-*   Node.js (LTS version recommended)
-*   npm or yarn
+- Node.js (LTS version recommended)
+- npm or yarn
 
 ### Installation
 

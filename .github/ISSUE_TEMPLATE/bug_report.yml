@@ -1,9 +1,9 @@
 name: Bug Report
 description: Report a bug to help us improve
-title: "[Bug]: "
-labels: ["bug", "triage"]
+title: '[Bug]: '
+labels: ['bug', 'triage']
 assignees:
-  - # Assign yourself or leave empty
+  -  # Assign yourself or leave empty
 body:
   - type: markdown
     attributes:

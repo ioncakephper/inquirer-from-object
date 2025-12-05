@@ -1,9 +1,9 @@
 name: Question or Help Request
 description: Ask a question or request help with using the project
-title: "[Question]: "
-labels: ["question", "help wanted"]
+title: '[Question]: '
+labels: ['question', 'help wanted']
 assignees:
-  - # Assign yourself or leave empty
+  -  # Assign yourself or leave empty
 body:
   - type: markdown
     attributes:

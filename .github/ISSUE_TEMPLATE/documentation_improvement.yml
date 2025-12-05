@@ -1,9 +1,9 @@
 name: Documentation Improvement
 description: Suggest an improvement to the project's documentation
-title: "[Docs]: "
-labels: ["documentation", "enhancement"]
+title: '[Docs]: '
+labels: ['documentation', 'enhancement']
 assignees:
-  - # Assign yourself or leave empty
+  -  # Assign yourself or leave empty
 body:
   - type: markdown
     attributes:
