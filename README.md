@@ -1,7 +1,7 @@
 # inquirer-from-object
 
-![npm version](https://img.shields.io/npm/v/inquirer-from-object)
-![License](https://img.shields.io/npm/l/inquirer-from-object)
+[![npm version](https://img.shields.io/npm/v/inquirer-from-object)](https://www.npmjs.com/package/inquirer-from-object)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A library to dynamically generate Inquirer.js questions from a configuration object, supporting various data types and nested structures.
 
