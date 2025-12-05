@@ -126,7 +126,7 @@ describe('createPromptQuestions', () => {
       isValid: false,
       description: 'A test description',
       empty: null, // Should be treated as text
-      list: ['item1', 'item2'] // Should be treated as text
+      list: ['item1', 'item2'], // Should be treated as text
     };
 
     const expectedQuestions = [
@@ -170,7 +170,7 @@ describe('createPromptQuestions', () => {
       isValid: true,
       description: 'New description',
       empty: 'not empty',
-      list: 'item3,item4'
+      list: 'item3,item4',
     });
 
     const answers = await inquirer.prompt(questions);
@@ -179,7 +179,7 @@ describe('createPromptQuestions', () => {
       isValid: true,
       description: 'New description',
       empty: 'not empty',
-      list: 'item3,item4'
+      list: 'item3,item4',
     });
   });
 

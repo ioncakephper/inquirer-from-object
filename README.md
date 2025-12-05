@@ -7,10 +7,10 @@ A library to dynamically generate Inquirer.js questions from a configuration obj
 
 ## Key Features
 
-*   **Dynamic Question Generation:** Automatically creates Inquirer.js questions based on a given JavaScript object.
-*   **Type Inference:** Infers question types (text, number, confirm) from the JavaScript object's property values.
-*   **Nested Object Support:** Recursively generates questions for properties within nested objects, creating dot-separated names (e.g., `author.name`).
-*   **Customizable Messages:** Provides default question messages that are clear and informative, including value types.
+- **Dynamic Question Generation:** Automatically creates Inquirer.js questions based on a given JavaScript object.
+- **Type Inference:** Infers question types (text, number, confirm) from the JavaScript object's property values.
+- **Nested Object Support:** Recursively generates questions for properties within nested objects, creating dot-separated names (e.g., `author.name`).
+- **Customizable Messages:** Provides default question messages that are clear and informative, including value types.
 
 ## Installation
 
@@ -67,16 +67,16 @@ To run this example, save it as `example.js` and execute `node example.js`.
 
 Generates an array of Inquirer.js question objects from a given data object.
 
-*   `data` (`Object`, required): The configuration object from which to generate questions.
-*   `prefix` (`string`, optional): A string to prepend to the `name` of the generated questions. Useful for nested objects to create hierarchical names (e.g., `parent.child`). Defaults to an empty string.
-*   `formatMessage` (`Function`, optional): A custom function to format the question message. It receives two arguments: `type` (the inferred Inquirer.js question type) and `name` (the full name of the property, including prefix).
-    *   Default `formatMessage`:
-        ```javascript
-        (type, name) =>
-          type === "confirm"
-            ? `Confirm ${name} (yes/no)?`
-            : `Please enter a ${type} value for ${name}:`
-        ```
+- `data` (`Object`, required): The configuration object from which to generate questions.
+- `prefix` (`string`, optional): A string to prepend to the `name` of the generated questions. Useful for nested objects to create hierarchical names (e.g., `parent.child`). Defaults to an empty string.
+- `formatMessage` (`Function`, optional): A custom function to format the question message. It receives two arguments: `type` (the inferred Inquirer.js question type) and `name` (the full name of the property, including prefix).
+  - Default `formatMessage`:
+    ```javascript
+    (type, name) =>
+      type === 'confirm'
+        ? `Confirm ${name} (yes/no)?`
+        : `Please enter a ${type} value for ${name}:`;
+    ```
 
 **Returns:** `Array<Object>` - An array of Inquirer.js question objects.
 

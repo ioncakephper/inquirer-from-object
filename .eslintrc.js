@@ -2,11 +2,9 @@ module.exports = {
   env: {
     node: true,
     es2021: true,
+    jest: true, // Add this line to enable Jest globals
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier
-  ],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',

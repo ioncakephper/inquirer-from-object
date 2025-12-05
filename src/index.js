@@ -1,5 +1,5 @@
 const defaultFormatMessage = (type, name) =>
-  type === "confirm"
+  type === 'confirm'
     ? `Confirm ${name} (yes/no)?`
     : `Please enter a ${type} value for ${name}:`;
 
@@ -15,7 +15,7 @@ const defaultFormatMessage = (type, name) =>
  */
 function createPromptQuestions(
   data = {},
-  prefix = "",
+  prefix = '',
   formatMessage = defaultFormatMessage
 ) {
   const questions = [];
@@ -27,28 +27,28 @@ function createPromptQuestions(
 
       if (value === null) {
         questions.push({
-          type: "text",
+          type: 'text',
           name,
-          message: formatMessage("text", name),
+          message: formatMessage('text', name),
           default: null,
         });
-      } else if (typeof value === "object" && !Array.isArray(value)) {
+      } else if (typeof value === 'object' && !Array.isArray(value)) {
         // Recurse into nested objects
         questions.push(...createPromptQuestions(value, name, formatMessage));
       } else {
         let type;
         switch (typeof value) {
-          case "string":
-            type = "text";
+          case 'string':
+            type = 'text';
             break;
-          case "boolean":
-            type = "confirm";
+          case 'boolean':
+            type = 'confirm';
             break;
-          case "number":
-            type = "number";
+          case 'number':
+            type = 'number';
             break;
           default:
-            type = "text";
+            type = 'text';
         }
 
         questions.push({
