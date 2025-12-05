@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Simple utility to interact with the Gemini API to ask questions and get responses in CLI",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "inq": "./index.js"
   },
