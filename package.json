@@ -1,0 +1,48 @@
+{
+  "name": "inquirer-from-object",
+  "version": "1.0.0",
+  "description": "Dynamically generate Inquirer.js questions from a configuration object.",
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "index.js",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "inquirer",
+    "questions",
+    "prompt",
+    "configuration",
+    "dynamic",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioncakephper/inquirer-from-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ioncakephper/inquirer-from-object/issues"
+  },
+  "homepage": "https://github.com/ioncakephper/inquirer-from-object#readme",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "author": {
+    "name": "Ion Gireada",
+    "email": "shytiger@yahoo.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^13.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {},
+    "testMatch": ["**/src/**/*.test.js"]
+  }
+}

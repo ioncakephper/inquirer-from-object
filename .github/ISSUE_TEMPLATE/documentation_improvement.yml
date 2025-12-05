@@ -1,0 +1,43 @@
+name: Documentation Improvement
+description: Suggest an improvement to the project's documentation
+title: "[Docs]: "
+labels: ["documentation", "enhancement"]
+assignees:
+  - # Assign yourself or leave empty
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve our documentation!
+  - type: textarea
+    id: current-doc
+    attributes:
+      label: Where in the documentation is this issue?
+      description: Provide the specific page, section, or file path where the documentation can be improved.
+      placeholder: ex. `README.md`, `docs/installation.md` or "Installation section of the main README"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem or what could be improved?
+      description: Describe the current issue with the documentation (e.g., unclear, inaccurate, missing information, typos).
+      placeholder: Describe the problem here...
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion for improvement
+      description: Provide your suggested changes or how the documentation could be made better.
+      placeholder: How can we improve it?
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context (optional)
+      description: Add any other context or screenshots related to the documentation improvement.
+      render: markdown
+    validations:
+      required: false
