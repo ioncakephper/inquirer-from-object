@@ -1,48 +1,32 @@
 {
-  "name": "inquirer-from-object",
+  "name": "inq-questions",
   "version": "1.0.0",
-  "description": "Dynamically generate Inquirer.js questions from a configuration object.",
+  "description": "Simple utility to interact with the Gemini API to ask questions and get responses in CLI",
   "main": "index.js",
-  "type": "module",
-  "files": [
-    "index.js",
-    "src/",
-    "LICENSE",
-    "README.md"
-  ],
-  "keywords": [
-    "inquirer",
-    "questions",
-    "prompt",
-    "configuration",
-    "dynamic",
-    "cli"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ioncakephper/inquirer-from-object.git"
+  "bin": {
+    "inq": "./index.js"
   },
-  "bugs": {
-    "url": "https://github.com/ioncakephper/inquirer-from-object/issues"
-  },
-  "homepage": "https://github.com/ioncakephper/inquirer-from-object#readme",
   "scripts": {
+    "test": "node src/index.test.js",
     "start": "node index.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write ."
   },
-  "author": {
-    "name": "Ion Gireada",
-    "email": "shytiger@yahoo.com"
-  },
-  "license": "MIT",
+  "keywords": [
+    "gemini-cli"
+  ],
+  "author": "gemini",
+  "license": "ISC",
   "dependencies": {
-    "inquirer": "^13.0.2"
+    "commander": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "ora": "^8.0.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
-  },
-  "jest": {
-    "transform": {},
-    "testMatch": ["**/src/**/*.test.js"]
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3"
   }
 }
