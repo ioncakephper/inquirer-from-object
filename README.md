@@ -3,7 +3,11 @@
 [![npm version](https://img.shields.io/npm/v/inquirer-from-object)](https://www.npmjs.com/package/inquirer-from-object)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A library to dynamically generate Inquirer.js questions from a configuration object, supporting various data types and nested structures.
+## Description
+
+`inquirer-from-object` is a utility library that simplifies the process of creating interactive command-line prompts with Inquirer.js. It dynamically generates an array of Inquirer.js question objects from a given JavaScript configuration object, making it easy to build complex, data-driven CLI interactions. This library is ideal for scaffolding tools, configuration wizards, and any application that requires user input to populate a configuration structure.
+
+By automatically inferring question types, supporting nested objects, and providing customizable message formatting, `inquirer-from-object` streamlines the development of interactive prompts and reduces boilerplate code.
 
 ## Key Features
 
@@ -26,7 +30,7 @@ Here's a basic example of how to use `inquirer-from-object` to generate and prom
 
 ```javascript
 import inquirer from 'inquirer';
-import { createPromptQuestions } from 'inquirer-from-object';
+import createPromptQuestions from 'inquirer-from-object';
 
 const config = {
   name: 'My Awesome Project',
@@ -49,14 +53,31 @@ const config = {
   },
 };
 
-async function runPrompt() {
+/**
+ * Asynchronously generates Inquirer.js questions from a given configuration object
+ * and prompts the user for answers.
+ * @param {object} config - The configuration object used to generate questions.
+ * @returns {Promise<object>} A promise that resolves with an object containing the user's answers.
+ */
+async function getAnswers(config) {
   const questions = createPromptQuestions(config);
   const answers = await inquirer.prompt(questions);
-  console.log('Collected Answers:');
-  console.log(JSON.stringify(answers, null, '  '));
+  return answers;
 }
 
-runPrompt();
+/**
+ * The main function that orchestrates the question generation and prompting process.
+ * It calls `getAnswers` to collect user input and then logs the collected answers.
+ * @returns {Promise<void>}
+ */
+async function main() {
+  const answers = await getAnswers(config);
+  console.log('Collected Answers:');
+  console.log(JSON.stringify(answers, null, '  '));
+  // Now you can do more with the answers
+}
+
+main();
 ```
 
 To run this example, save it as `example.js` and execute `node example.js`.
@@ -67,16 +88,11 @@ To run this example, save it as `example.js` and execute `node example.js`.
 
 Generates an array of Inquirer.js question objects from a given data object.
 
-- `data` (`Object`, required): The configuration object from which to generate questions.
-- `prefix` (`string`, optional): A string to prepend to the `name` of the generated questions. Useful for nested objects to create hierarchical names (e.g., `parent.child`). Defaults to an empty string.
-- `formatMessage` (`Function`, optional): A custom function to format the question message. It receives two arguments: `type` (the inferred Inquirer.js question type) and `name` (the full name of the property, including prefix).
-  - Default `formatMessage`:
-    ```javascript
-    (type, name) =>
-      type === 'confirm'
-        ? `Confirm ${name} (yes/no)?`
-        : `Please enter a ${type} value for ${name}:`;
-    ```
+| Parameter | Type | Description | Default |
+| --- | --- | --- | --- |
+| `data` | `Object` | The configuration object from which to generate questions. | `required` |
+| `prefix` | `string` | A string to prepend to the `name` of the generated questions. Useful for nested objects to create hierarchical names (e.g., `parent.child`). | `''` |
+| `formatMessage`| `Function` | A custom function to format the question message. It receives two arguments: `type` (the inferred Inquirer.js question type) and `name` (the full name of the property, including prefix). | `defaultFormatMessage` |
 
 **Returns:** `Array<Object>` - An array of Inquirer.js question objects.
 
